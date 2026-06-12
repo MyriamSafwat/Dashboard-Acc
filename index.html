@@ -3,35 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AL-WATAD | Dashboard-Acc</title>
+  <title>AL-WATAD | Purchase Request Portal</title>
   <style>
+    html,
     body {
-      background: #050505;
-      color: #ffffff;
-      font-family: sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
       margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #050505;
     }
-    .loader-container {
-      text-align: center;
+
+    iframe {
+      width: 100%;
+      height: 100vh;
+      border: 0;
+      display: block;
+      background: #050505;
     }
-    .loader-text {
-      font-size: 1.2rem;
-      margin-top: 15px;
-      letter-spacing: 0.5px;
+
+    /* رفع المحتوى شوية على الموبايل */
+    @media (max-width: 768px) {
+      iframe {
+        height: calc(100dvh - 35px);
+        transform: none;
+      }
     }
   </style>
-  
-  <script>
-    window.location.href = "https://script.google.com/macros/s/AKfycbz9k3VLgMTpPOFmz1cMlGgDvXh0bztmSNk7NpyP2XTqsC3RhhVRg0Q8icBmVSCwsWuEbw/exec?page=Page_Admin";
-  </script>
 </head>
+
 <body>
-  <div class="loader-container">
-    <div class="loader-text">جاري الانتقال بأمان إلى نظام المشتريات...</div>
-  </div>
+  <iframe
+    src="https://script.google.com/macros/s/AKfycbz9k3VLgMTpPOFmz1cMlGgDvXh0bztmSNk7NpyP2XTqsC3RhhVRg0Q8icBmVSCwsWuEbw/exec?page=Page_Admin"
+    allow="geolocation *"
+    sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
 </body>
 </html>
